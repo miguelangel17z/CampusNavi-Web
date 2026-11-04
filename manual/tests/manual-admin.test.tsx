@@ -21,6 +21,8 @@ describe("Manual del administrador", () => {
       "panel",
       "recolector",
       "lugares",
+      "imagenes",
+      "videos",
       "mapa",
     ]);
   });
@@ -67,16 +69,28 @@ describe("Manual del administrador", () => {
     const { container } = render(<ManualAdministradorPage />);
     // En jsdom next/image no lee `images.unoptimized` y genera `/_next/image?url=...`; se decodifica.
     const srcs = [...container.querySelectorAll("img")].map((i) => decodeURIComponent(i.getAttribute("src") ?? ""));
-    for (const id of ["adminLogin", "adminPanel", "adminLugares", "adminReasignar", "adminMapa", "grafoEafit"] as const) {
+    for (const id of [
+      "adminLogin",
+      "adminPanel",
+      "adminLugares",
+      "adminReasignar",
+      "adminMapa",
+      "grafoEafit",
+      "adminRecolectorPartida",
+      "adminRecolectorConfig",
+      "adminCalibrarPaso",
+      "adminLugaresLista",
+      "adminEditorMapa",
+      "adminAlertasLista",
+      "adminVideosLista",
+    ] as const) {
       expect(srcs.some((s) => s.includes(capturas[id].src)), capturas[id].src).toBe(true);
     }
   });
 
-  it("el recolector tiene el espacio marcado para la captura pendiente", () => {
+  it("ya no quedan bloques de captura pendiente", () => {
     const { container } = render(<ManualAdministradorPage />);
-    const recolector = screen.getByRole("article", { name: "Recolector de imágenes" });
-    expect(recolector.querySelector("[data-captura-pendiente]")).not.toBeNull();
-    expect(container.querySelectorAll("[data-captura-pendiente]")).toHaveLength(1);
+    expect(container.querySelectorAll("[data-captura-pendiente]")).toHaveLength(0);
   });
 
   it("las acciones irreversibles tienen aviso de atención", () => {

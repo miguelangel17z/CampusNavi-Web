@@ -6,8 +6,7 @@ export type Bloque =
   | { tipo: "pasos"; items: string[] }
   | { tipo: "lista"; items: { termino: string; texto: string; enlace?: string }[] }
   | { tipo: "figura"; capturas: CapturaId[]; pie: string; ancha?: boolean }
-  | { tipo: "aviso"; variante: "info" | "peligro"; titulo: string; texto: string }
-  | { tipo: "pendiente"; titulo: string; texto: string };
+  | { tipo: "aviso"; variante: "info" | "peligro"; titulo: string; texto: string };
 
 export type Seccion = {
   id: string;
@@ -92,17 +91,17 @@ export const manualAdmin: { titulo: string; intro: string; secciones: Seccion[] 
               texto: "Captura las fotos del entorno que forman el dataset.",
               enlace: "#recolector",
             },
-            { termino: "Lugares", texto: "Organiza las fotos según los lugares del campus.", enlace: "#lugares" },
+            { termino: "Lugares", texto: "Registra los lugares del campus que la app reconoce.", enlace: "#lugares" },
             {
               termino: "Mapa y alertas",
               texto: "Muestra los recorridos sobre el mapa y las alertas de obstáculos.",
               enlace: "#mapa",
             },
-            { termino: "Imágenes", texto: "Revisa y administra el dataset de imágenes.", enlace: "#galeria" },
+            { termino: "Imágenes", texto: "Revisa y administra el dataset de imágenes.", enlace: "#imagenes" },
             {
               termino: "Videos",
               texto: "Gestiona los recorridos de recolección. Cada video agrupa las fotos de un recorrido.",
-              enlace: "#recorrido",
+              enlace: "#videos",
             },
           ],
         },
@@ -144,22 +143,113 @@ export const manualAdmin: { titulo: string; intro: string; secciones: Seccion[] 
           ],
         },
         {
+          tipo: "subtitulo",
+          id: "recolector-partida",
+          texto: "1. Fijar la ubicación de partida",
+        },
+        {
+          tipo: "parrafo",
+          texto:
+            "Antes de recolectar, la pantalla «Fijar ubicación de partida» te pide colocarte en un punto reconocible y marcar tu posición exacta. Toca el mapa para fijar la latitud y la longitud, o usa «Centrar» para ubicarte. Indica hacia dónde miras en la brújula de «Orientación». Cuando esté listo, toca «Confirmar y comenzar».",
+        },
+        {
+          tipo: "figura",
+          capturas: ["adminRecolectorPartida"],
+          pie: "Pantalla para fijar la ubicación de partida sobre el mapa del campus.",
+        },
+        {
+          tipo: "subtitulo",
+          id: "recolector-config",
+          texto: "2. Configurar el recorrido",
+        },
+        {
+          tipo: "parrafo",
+          texto:
+            "Más abajo, en la misma pantalla, puedes afinar el recorrido antes de empezar:",
+        },
+        {
+          tipo: "lista",
+          items: [
+            { termino: "Usar brújula del teléfono", texto: "Toma la orientación del sensor del celular." },
+            {
+              termino: "Usar mi última posición",
+              texto: "Continúa desde el final del video anterior, útil para encadenar recorridos.",
+            },
+            {
+              termino: "Calibrar mi paso",
+              texto: "Por defecto usa 0,72 m. Calibra para que la posición estimada sea más precisa.",
+              enlace: "#calibrar",
+            },
+            { termino: "Nombre del video", texto: "Opcional. Ponle un nombre que luego reconozcas, por ejemplo «video_7»." },
+          ],
+        },
+        {
+          tipo: "figura",
+          capturas: ["adminRecolectorConfig"],
+          pie: "Orientación, última posición, calibración del paso y nombre del video.",
+        },
+        {
+          tipo: "subtitulo",
+          id: "calibrar",
+          texto: "Calibrar la longitud del paso",
+        },
+        {
+          tipo: "parrafo",
+          texto:
+            "La app mide tu avance contando pasos, así que necesita saber cuánto mides de paso. En «Calibrar longitud de paso», toca el mapa donde empieza un tramo recto (punto A) y donde termina (punto B); mejor un tramo de 30 metros o más, mínimo 10. Camínalo y la app calcula tu paso a partir del tramo, los pasos y el tiempo. «Limpiar puntos» reinicia la medición.",
+        },
+        {
+          tipo: "figura",
+          capturas: ["adminCalibrarPaso"],
+          pie: "Calibración del paso marcando un tramo recto sobre el mapa.",
+        },
+        {
+          tipo: "subtitulo",
+          id: "recolectar",
+          texto: "3. Recorrer y subir",
+        },
+        {
+          tipo: "pasos",
+          items: [
+            "Toca «Confirmar y comenzar». Camina por el campus con el celular vertical frente a ti.",
+            "La app estima tu posición con los pasos, la velocidad, la aceleración y la orientación, y toma fotos automáticamente con su coordenada.",
+            "Al terminar, las fotos se suben al servidor, que calcula sus embeddings y las agrega al dataset.",
+          ],
+        },
+        {
           tipo: "aviso",
           variante: "info",
           titulo: "Para que la posición sea precisa",
           texto:
-            "Marca bien el punto de partida y camina a ritmo constante. La posición se calcula a partir de ese punto, así que un error al inicio se arrastra a todas las fotos del recorrido.",
-        },
-        {
-          tipo: "pendiente",
-          titulo: "Captura pendiente",
-          texto: "Aquí irán las capturas de la ubicación manual inicial y de la recolección en curso.",
+            "Marca bien el punto de partida, calibra el paso y camina a ritmo constante. La posición se calcula a partir de ese punto, así que un error al inicio se arrastra a todas las fotos del recorrido.",
         },
       ],
     },
     {
       id: "lugares",
       titulo: "Lugares",
+      resumen: "Registrar los lugares del campus que la app puede reconocer.",
+      bloques: [
+        {
+          tipo: "parrafo",
+          texto:
+            "Un lugar es un destino con nombre y coordenadas (por ejemplo «Biblioteca» o «Bloque 38»). A cada lugar se le asignan fotos del dataset; así, cuando la app reconoce esas fotos, puede decir el nombre del lugar.",
+        },
+        {
+          tipo: "parrafo",
+          texto:
+            "La pantalla «Lugares» muestra cuántos hay registrados, con las pestañas Lista y Mapa. Cada lugar indica su tipo (entrada, bloque, cafetería…), cuántas fotos tiene y sus coordenadas. Puedes buscar un lugar, filtrar por tipo y, con «Nuevo lugar», registrar uno nuevo. El menú de tres puntos de cada lugar permite editarlo o eliminarlo.",
+        },
+        {
+          tipo: "figura",
+          capturas: ["adminLugaresLista"],
+          pie: "Lista de lugares registrados, con su tipo, número de fotos y coordenadas.",
+        },
+      ],
+    },
+    {
+      id: "imagenes",
+      titulo: "Imágenes del dataset",
       resumen: "Revisar las fotos del dataset y asignarlas a lugares.",
       bloques: [
         {
@@ -229,10 +319,20 @@ export const manualAdmin: { titulo: string; intro: string; secciones: Seccion[] 
       ],
     },
     {
-      id: "mapa",
-      titulo: "Mapa y alertas",
-      resumen: "Recorridos sobre el mapa, alertas y la red de caminos.",
+      id: "videos",
+      titulo: "Videos",
+      resumen: "Los recorridos de recolección y las fotos de cada uno.",
       bloques: [
+        {
+          tipo: "parrafo",
+          texto:
+            "Cada recorrido de recolección es un «video»: no guarda un video, solo agrupa las fotos de ese recorrido. La pantalla «Videos de recolección» los lista con su fecha, número de fotos, metros, duración y estado («Procesado» cuando ya tienen sus embeddings). Puedes buscarlos por nombre y ordenarlos por recientes, nombre o número de fotos.",
+        },
+        {
+          tipo: "figura",
+          capturas: ["adminVideosLista"],
+          pie: "Lista de videos de recolección, cada uno con su fecha, fotos, metros y estado.",
+        },
         {
           tipo: "subtitulo",
           id: "recorrido",
@@ -250,13 +350,13 @@ export const manualAdmin: { titulo: string; intro: string; secciones: Seccion[] 
             "«Ver detalle» abre la foto completa. «Eliminar foto» la quita del dataset.",
             "Marca «Mostrar otros videos» para ver al mismo tiempo los demás recorridos y detectar zonas sin fotos.",
             "Usa los botones + y − para acercar o alejar el mapa.",
-            "«Renombrar» cambia el nombre del video, por ejemplo de «video1» a «Bloque 37 - acceso norte».",
+            "«Renombrar» cambia el nombre del video; «Eliminar video» lo borra por completo.",
           ],
         },
         {
           tipo: "figura",
           capturas: ["adminMapa"],
-          pie: "Recorrido «video1»: seis fotos entre el Bloque 37 y el Bloque 36 - Cafeterías.",
+          pie: "Recorrido en el mapa: las fotos numeradas en el orden en que se tomaron, con Renombrar y Eliminar video.",
         },
         {
           tipo: "aviso",
@@ -264,6 +364,28 @@ export const manualAdmin: { titulo: string; intro: string; secciones: Seccion[] 
           titulo: "Eliminar video borra todas sus fotos",
           texto:
             "«Eliminar video» borra el recorrido junto con todas sus fotos y sus embeddings del dataset. Úsalo solo cuando todo el recorrido salió mal, por ejemplo si el punto de partida quedó mal marcado.",
+        },
+      ],
+    },
+    {
+      id: "mapa",
+      titulo: "Mapa y alertas",
+      resumen: "El editor del mapa, las alertas de obstáculos y la red de caminos.",
+      bloques: [
+        {
+          tipo: "subtitulo",
+          id: "editor",
+          texto: "El editor de mapa y alertas",
+        },
+        {
+          tipo: "parrafo",
+          texto:
+            "El editor muestra el campus con varias capas que puedes mostrar u ocultar: alertas, lugares, cobertura de fotos y rutas. Arriba hay filtros por tipo, prioridad y estado, y el indicador «Todo sincronizado» avisa cuando todo está guardado. «Mi posición» te centra en el mapa y «Ver lista» abre la lista de alertas. Cuando hagas cambios, toca «Guardar / Sincronizar» para subirlos.",
+        },
+        {
+          tipo: "figura",
+          capturas: ["adminEditorMapa"],
+          pie: "Editor de mapa y alertas, con las capas, los filtros y los botones «Nueva alerta» y «Guardar / Sincronizar».",
         },
         {
           tipo: "subtitulo",
@@ -273,7 +395,17 @@ export const manualAdmin: { titulo: string; intro: string; secciones: Seccion[] 
         {
           tipo: "parrafo",
           texto:
-            "Una alerta es un punto en el mapa con un mensaje corto escrito para la persona con discapacidad visual, por ejemplo: «Ten cuidado, hay bancas cerca». Sirven para marcar lagos, bancas, escaleras u obras. Puedes crearlas desde el editor del mapa o mientras recolectas fotos. El número de alertas activas aparece en el resumen rápido del panel.",
+            "Una alerta es un punto en el mapa con un mensaje corto escrito para la persona con discapacidad visual, por ejemplo: «Ten cuidado, hay bancas cerca». Sirven para marcar lagos, bancas, escaleras u obras. Cada alerta tiene un tipo (agua, mobiliario, escalones, obras…), una prioridad y un radio en metros. Puedes crearlas con «Nueva alerta» desde el editor o mientras recolectas fotos.",
+        },
+        {
+          tipo: "parrafo",
+          texto:
+            "La pantalla «Alertas» lista las que ya existen, con su mensaje, tipo, prioridad, radio y estado (activa o no), y permite buscarlas y filtrarlas. El menú de tres puntos de cada alerta permite editarla o eliminarla. El número de alertas activas aparece en el resumen rápido del panel.",
+        },
+        {
+          tipo: "figura",
+          capturas: ["adminAlertasLista"],
+          pie: "Lista de alertas, cada una con su mensaje, prioridad, radio y estado.",
         },
         {
           tipo: "aviso",

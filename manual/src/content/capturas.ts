@@ -58,6 +58,48 @@ export const capturas = {
     ...telefono,
     alt: "Detalle del recorrido «video1», del 09/10/2026, con 6 fotos y 36 metros. Sobre el mapa del campus, entre el Bloque 37 y el Bloque 36 - Cafeterías, hay seis puntos numerados unidos por una línea. Arriba está la casilla «Mostrar otros videos». Abajo, la tarjeta «Foto 1 de 6» con sus coordenadas, la orientación «180° S» y los botones «Ver detalle» y «Eliminar foto»; luego las miniaturas de las seis fotos y los botones «Renombrar» y «Eliminar video».",
   },
+  adminRecolectorPartida: {
+    src: "/capturas/admin-recolector-partida.jpg",
+    width: 620,
+    height: 1588,
+    alt: "Pantalla «Fijar ubicación de partida, antes de recolectar». Un aviso dice «Colócate en un punto reconocible y marca tu posición exacta». Debajo, el mapa del campus con un botón «Centrar», los lugares ya registrados (Auditorio Principal, Biblioteca Central, Cafetería Principal, Bloque de los Trillizos, Entrada Principal) y los botones de acercar y alejar. Más abajo, una brújula «Orientación, indica hacia dónde miras» y «Coordenadas, toca el mapa para fijarlas» con Latitud y Longitud. Abajo, los botones «Cancelar» y «Confirmar y comenzar».",
+  },
+  adminRecolectorConfig: {
+    src: "/capturas/admin-recolector-config.jpg",
+    width: 620,
+    height: 1588,
+    alt: "Parte inferior de la pantalla de partida. La brújula de orientación con el botón «Usar brújula del teléfono», y las coordenadas de latitud y longitud. Debajo, «Usar mi última posición: continúa desde el final del video anterior», «Calibrar mi paso: usando 0,72 metros (valor genérico), calibra para mayor precisión» y el campo «Nombre del video (opcional)» con el valor «video_7». Abajo, «Cancelar» y «Confirmar y comenzar».",
+  },
+  adminCalibrarPaso: {
+    src: "/capturas/admin-calibrar-paso.jpg",
+    width: 620,
+    height: 1588,
+    alt: "Pantalla «Calibrar longitud de paso. En uso: 0,72 metros (genérica)». Un aviso dice «Toca el mapa donde empieza el tramo (A). Mejor un tramo de 30 metros o más, mínimo 10 metros». Debajo, el mapa del campus con la Biblioteca Luis Echavarría Villegas, la Plazoleta del estudiante y el Bloque 38. Abajo, tres recuadros vacíos: Tramo, Pasos y Tiempo, y el botón «Limpiar puntos».",
+  },
+  adminLugaresLista: {
+    src: "/capturas/admin-lugares-lista.jpg",
+    width: 620,
+    height: 1588,
+    alt: "Pantalla «Lugares, 3 lugares registrados», con las pestañas Lista y Mapa, un buscador «Buscar un lugar» y filtros por tipo (Biblioteca, Cafetería). La lista muestra tres lugares con su tipo, el número de fotos y sus coordenadas: Biblioteca (Entrada, 0 fotos), Bloque 35 (Entrada, 0 fotos) y Bloque 38 (Bloque, 0 fotos). Abajo, el botón «Nuevo lugar».",
+  },
+  adminEditorMapa: {
+    src: "/capturas/admin-editor-mapa.jpg",
+    width: 620,
+    height: 1588,
+    alt: "Pantalla «Editor de mapa y alertas: agrega, mueve y gestiona alertas sobre el mapa», con el indicador «Todo sincronizado» en verde. Un panel de capas con casillas para Alertas y Lugares activadas, y Cobertura de fotos y Rutas desactivadas, más filtros de Tipo, Prioridad y Estado. En el mapa hay marcadores de lugares (Bloque 38, Bloque 35, Biblioteca) y dos alertas con ícono de gota de agua. Botones «Mi posición», «Ver lista», «Nueva alerta» y «Guardar / Sincronizar».",
+  },
+  adminAlertasLista: {
+    src: "/capturas/admin-alertas-lista.jpg",
+    width: 620,
+    height: 1588,
+    alt: "Pantalla «Alertas, 2 alertas» con un buscador «Buscar por mensaje» y filtros por tipo (Agua, Mobiliario, Escalones, Obras) y por prioridad y estado. Hay dos alertas de tipo agua: «Cerca está el espejo de agua de la biblioteca» (Normal, 20 metros, Activa) y «Ten cuidado, cerca está el espejo de agua» (Normal, 25 metros, Activa), ambas modificadas el 28/10/2026. Abajo, el botón «Nueva alerta».",
+  },
+  adminVideosLista: {
+    src: "/capturas/admin-videos-lista.jpg",
+    width: 620,
+    height: 1588,
+    alt: "Pantalla «Videos de recolección, 6 videos», con un buscador «Buscar por nombre» y opciones para ordenar por Recientes, Nombre o Más fotos. La lista muestra recorridos con su fecha, número de fotos, metros y duración, todos «Procesado» en verde: alejo38-2 (5 fotos, 22 metros), alejo38_1 (7 fotos, 24 metros), alejobiblio2 (4 fotos, 12 metros), alejo003 (5 fotos, 14 metros) y alejo002. Abajo, el botón «Nuevo video».",
+  },
   grafoEafit: {
     src: "/capturas/grafo-eafit.jpeg",
     width: 985,

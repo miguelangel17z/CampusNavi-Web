@@ -39,22 +39,6 @@ export function Aviso({ variante, titulo, texto }: { variante: "info" | "peligro
   );
 }
 
-export function CapturaPendiente({ titulo, texto }: { titulo: string; texto: string }) {
-  return (
-    <div
-      data-captura-pendiente
-      className="flex flex-col items-center gap-2 rounded-3xl border-2 border-dashed border-line bg-surface/60 px-6 py-10 text-center"
-    >
-      <svg viewBox="0 0 24 24" className="h-10 w-10 text-lilac" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
-        <path d="M4 8h3l2-3h6l2 3h3v11H4z" strokeLinejoin="round" />
-        <circle cx="12" cy="13" r="3.5" />
-      </svg>
-      <p className="font-semibold text-lilac">{titulo}</p>
-      <p className="max-w-md text-muted">{texto}</p>
-    </div>
-  );
-}
-
 export function Figura({ ids, pie, ancha }: { ids: (keyof typeof capturas)[]; pie: string; ancha?: boolean }) {
   return (
     <figure className="rounded-3xl border border-line bg-surface/60 p-6">
@@ -122,7 +106,5 @@ export function RenderBloque({ bloque }: { bloque: Bloque }) {
       return <Figura ids={bloque.capturas} pie={bloque.pie} ancha={bloque.ancha} />;
     case "aviso":
       return <Aviso variante={bloque.variante} titulo={bloque.titulo} texto={bloque.texto} />;
-    case "pendiente":
-      return <CapturaPendiente titulo={bloque.titulo} texto={bloque.texto} />;
   }
 }

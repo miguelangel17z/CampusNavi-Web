@@ -46,3 +46,6 @@ next-env.d.ts
 
 # entorno de Python para generar audios
 /.venv/
+
+# Capturas originales sin optimizar (las versiones web están en public/capturas/)
+/src/components/images/
