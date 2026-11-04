@@ -33,18 +33,22 @@ Mensaje clave: el sitio tiene dos públicos distintos y cada manual está pensad
 ### 2. Manual para personas con discapacidad visual (`/manual-usuario/`) · 3 a 4 minutos
 
 1. Entrar desde la tarjeta o desde el menú «Manual de usuario».
-2. Explicar la estructura: un solo título principal y un encabezado por paso («Paso 1. Antes de empezar» …
+2. Mostrar **«Cómo usar este manual»**, que está antes de cualquier audio: explica que se puede leer con
+   TalkBack deslizando a la derecha (siguiente bloque) y a la izquierda (bloque anterior), o escuchar los
+   audios.
+3. Explicar la estructura: un solo título principal y un encabezado por paso («Paso 1. Antes de empezar» …
    «Paso 7. Si algo falla»). Con TalkBack la persona salta de paso en paso con el control «Encabezados».
-3. **Demostración de audio:**
+4. **Demostración de audio:**
    - Bajar al **Paso 4. Da una vuelta completa** y tocar «Escuchar paso 4…». Dejar sonar unos 10 segundos.
    - Señalar que el botón cambió a «Pausar…» y que su nombre dice cuánto dura el audio.
    - Sin pausar, tocar «Escuchar» en el **Paso 6. Escucha dónde estás**: el audio del paso 4 se detiene solo.
      Solo suena un audio a la vez.
    - Pausar. Mencionar que nunca arranca solo: la persona decide cuándo escuchar.
-4. Volver arriba y mostrar el botón **«Escuchar el manual completo»** (unos 4 minutos). No reproducirlo entero.
-5. Mostrar una captura y explicar que su texto alternativo describe la pantalla, para quien acompaña a la
+5. Volver arriba y mostrar el botón **«Escuchar el manual completo»**, justo debajo de «Cómo usar este manual»
+   (algo más de 3 minutos). No reproducirlo entero.
+6. Mostrar una captura y explicar que su texto alternativo describe la pantalla, para quien acompaña a la
    persona.
-6. Contar cómo se hicieron los audios: con edge-tts y voz neuronal colombiana, generados desde el mismo texto
+7. Contar cómo se hicieron los audios: con edge-tts y voz neuronal colombiana, generados desde el mismo texto
    de la página. Si el texto cambia y no se regeneran, las pruebas fallan.
 
 Mensaje clave: la persona ciega puede leer el manual sola con TalkBack o escucharlo.
@@ -116,9 +120,18 @@ local). Marcar cada punto en `/manual-usuario/` y repetir lo básico en `/` y `/
 
 **Encabezados**
 
-- [ ] Con el control de lectura «Encabezados» (deslizar arriba o abajo para elegirlo, luego deslizar a la
-      derecha), el primer encabezado es el título del manual y es el único de nivel 1.
-- [ ] Cada paso se anuncia como encabezado de nivel 2: «Paso 1. Antes de empezar» hasta «Paso 7. Si algo falla».
+- [ ] Con el control de lectura «Encabezados» (deslizar arriba y luego abajo, en un solo gesto, hasta oír
+      «Encabezados»; después deslizar abajo para el siguiente), el primer encabezado es el título del manual y
+      es el único de nivel 1.
+- [ ] Después vienen, como encabezados de nivel 2, «Cómo usar este manual» y cada paso: «Paso 1. Antes de
+      empezar» hasta «Paso 7. Si algo falla».
+
+**Lectura bloque por bloque**
+
+- [ ] Deslizando solo a la derecha desde el título, el orden es: título, introducción, «Cómo usar este manual»
+      con sus párrafos, botón «Escuchar el manual completo» y luego los pasos. La explicación llega antes que
+      cualquier audio.
+- [ ] Deslizar a la izquierda vuelve al bloque anterior.
 - [ ] No hay encabezados de otros niveles dentro de los pasos.
 - [ ] En el manual del administrador, cada sección del índice lleva a su encabezado.
 

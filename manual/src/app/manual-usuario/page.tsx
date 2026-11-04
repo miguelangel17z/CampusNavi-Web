@@ -25,16 +25,9 @@ export default function ManualUsuarioPage() {
         <header>
           <h1 className="text-3xl font-bold leading-tight [overflow-wrap:anywhere] sm:text-5xl">{titulo}</h1>
           <p className="mt-5 text-xl leading-relaxed text-muted">{intro}</p>
-          <div className="mt-8">
-            <AudioButton
-              src={AUDIO_COMPLETO}
-              etiqueta="el manual completo"
-              duracion={duraciones.completo}
-              grande
-            />
-          </div>
         </header>
 
+        {/* Va antes del audio completo: quien llega con TalkBack primero oye cómo leer o escuchar el manual. */}
         <section
           aria-labelledby="como-usar"
           className="mt-10 rounded-3xl border border-violet bg-gradient-to-br from-violet-strong/30 to-surface p-6 sm:p-8"
@@ -48,6 +41,10 @@ export default function ManualUsuarioPage() {
             ))}
           </div>
         </section>
+
+        <div className="mt-8">
+          <AudioButton src={AUDIO_COMPLETO} etiqueta="el manual completo" duracion={duraciones.completo} grande />
+        </div>
 
         <div className="mt-10 space-y-8">
           {pasos.map((paso, i) => (

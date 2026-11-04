@@ -2,8 +2,9 @@
   "titulo": "Manual para personas con discapacidad visual",
   "intro": "Este manual explica cómo usar Campus Navi para saber dónde estás dentro del campus. Son siete pasos cortos y cada uno tiene un botón para escucharlo.",
   "comoUsar": [
-    "Para pasar de un paso a otro con TalkBack, elige el control de lectura «Encabezados», deslizando hacia arriba o hacia abajo, y luego desliza hacia la derecha.",
-    "En cada paso hay un botón «Escuchar». Tócalo dos veces para oír el paso y vuelve a tocarlo dos veces para pausarlo."
+    "Puedes leer este manual con TalkBack o escucharlo en audio. Las dos formas dicen lo mismo.",
+    "Para leerlo, desliza un dedo hacia la derecha: TalkBack lee el siguiente bloque de texto. Para volver al bloque anterior, desliza hacia la izquierda. Sigue deslizando hacia la derecha para recorrer el manual de principio a fin.",
+    "Para escucharlo, justo después de esta explicación está el botón «Escuchar el manual completo». Tócalo dos veces para que empiece y vuelve a tocarlo dos veces para pausarlo. Cada paso también tiene su propio botón «Escuchar», por si solo quieres oír ese paso."
   ],
   "cierre": "Eso es todo. Ya sabes usar Campus Navi para saber dónde estás.",
   "pasos": [
