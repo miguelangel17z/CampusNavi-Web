@@ -1,0 +1,24 @@
+{
+  "voz": "es-CO-SalomeNeural",
+  "velocidad": "-5%",
+  "audios": {
+    "antes": "07bb35aaa4e74e3496d5062981cddbb64b35d7d4216c4a9dcc50b733977742e9",
+    "abrir": "23f97acbacc763510f75b5df9555a86b289b01ec73fd326214af385513fea680",
+    "pedir": "79160da8b8284ee960df16e83a5b191cb9845ebf8cb23e13f2376ab591befc7b",
+    "vuelta": "39711f70693a552e58c3cff0134d746a30204a90a1de8e47d2e115ec48a8ed08",
+    "esperar": "b787404f98a19d96da5d65799252affa9d792b9e11d5e9d1125009018e63a6d4",
+    "resultado": "cb7598b8285b818b7b70438e4ef35ce0103ad2825a882441782ff401582677b3",
+    "problemas": "24ca588a485d12904e46c24ffe2d963e1e888ae59f1b176a3871ed8a3be6be22",
+    "completo": "725716bd13332ea35563731dcc1b6a5f75503a28512e996648a58aca234b2c5f"
+  },
+  "duraciones": {
+    "antes": 20,
+    "abrir": 38,
+    "pedir": 24,
+    "vuelta": 40,
+    "esperar": 16,
+    "resultado": 33,
+    "problemas": 40,
+    "completo": 230
+  }
+}

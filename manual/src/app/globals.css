@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/* Paleta tomada de las capturas de la app Campus Navi. */
+@theme {
+  --color-night: #050816;
+  --color-surface: #0c1030;
+  --color-surface-2: #12173d;
+  --color-line: #2e2a6b;
+  --color-violet: #7c4dff;
+  --color-violet-strong: #5b3df5;
+  --color-lilac: #c4b5fd;
+  --color-muted: #aeb2d0;
+  --color-ok: #34d399;
+  --color-danger: #fca5a5;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+html {
+  background-color: var(--color-night);
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(60rem 40rem at 50% -10%, rgb(124 77 255 / 0.18), transparent 70%),
+    var(--color-night);
+}
+
+/* Foco siempre visible y con buen contraste (teclado y lectores de pantalla). */
+:focus-visible {
+  outline: 3px solid var(--color-lilac);
+  outline-offset: 3px;
+  border-radius: 0.5rem;
+}
+
+/* Al saltar a una sección, que el encabezado no quede pegado al borde. */
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+/* El orbe de la app. */
+.orb {
+  border-radius: 9999px;
+  background: radial-gradient(circle at 50% 50%, #2a1678 0%, #5b3df5 48%, #7c4dff 78%);
+  border: 4px solid #c4b5fd;
+  box-shadow:
+    0 0 60px rgb(124 77 255 / 0.55),
+    0 0 140px rgb(124 77 255 / 0.25);
+  animation: orb-pulse 3.2s ease-in-out infinite;
+}
+
+@keyframes orb-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

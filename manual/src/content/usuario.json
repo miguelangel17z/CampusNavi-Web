@@ -1,0 +1,80 @@
+{
+  "titulo": "Manual para personas con discapacidad visual",
+  "intro": "Este manual explica cómo usar Campus Navi para saber dónde estás dentro del campus. Son siete pasos cortos y cada uno tiene un botón para escucharlo.",
+  "comoUsar": [
+    "Para pasar de un paso a otro con TalkBack, elige el control de lectura «Encabezados», deslizando hacia arriba o hacia abajo, y luego desliza hacia la derecha.",
+    "En cada paso hay un botón «Escuchar». Tócalo dos veces para oír el paso y vuelve a tocarlo dos veces para pausarlo."
+  ],
+  "cierre": "Eso es todo. Ya sabes usar Campus Navi para saber dónde estás.",
+  "pasos": [
+    {
+      "id": "antes",
+      "titulo": "Antes de empezar",
+      "parrafos": [
+        "Necesitas un celular Android con Campus Navi instalada, TalkBack activado y conexión a internet.",
+        "Busca un sitio donde puedas girar sobre tu lugar sin chocar con nada. Si vas con alguien, puede acompañarte durante la vuelta."
+      ]
+    },
+    {
+      "id": "abrir",
+      "titulo": "Abre la app y acepta los permisos",
+      "parrafos": [
+        "Abre Campus Navi. La primera vez, la app te explica por voz para qué necesita cada permiso y luego te los pide.",
+        "Acepta los tres permisos: micrófono, cámara y sensores de actividad. En cada aviso, elige la opción que da acceso, por ejemplo «Mientras la app está en uso», y tócala dos veces."
+      ],
+      "oiras": [
+        "Necesito el micrófono para escucharte, la cámara para reconocer lo que hay a tu alrededor y los sensores de actividad para saber cómo te mueves."
+      ]
+    },
+    {
+      "id": "pedir",
+      "titulo": "Pide saber dónde estás",
+      "parrafos": [
+        "Cuando termina la bienvenida, la app queda escuchando. En el centro de la pantalla hay un botón grande y redondo: el orbe.",
+        "Di «uno». También puedes tocar dos veces el orbe. Si la app no te entiende, repite «uno» con voz clara."
+      ],
+      "capturas": ["inicioUsuario"]
+    },
+    {
+      "id": "vuelta",
+      "titulo": "Da una vuelta completa",
+      "parrafos": [
+        "Sostén el celular de pie frente a tu pecho, con la pantalla hacia ti y la cámara hacia afuera.",
+        "Gira despacio sobre tu lugar hacia la derecha. No tienes que tocar nada: la app toma cinco fotos sola. Cada vez que toma una, el celular vibra y suena un pitido.",
+        "Si giras muy rápido o inclinas el celular, la app te avisa. Sigue girando hasta completar la vuelta."
+      ],
+      "oiras": ["Gira lentamente hacia la derecha.", "Más despacio.", "Mantén el celular vertical."],
+      "capturas": ["escaneoInicio", "escaneoFinal"]
+    },
+    {
+      "id": "esperar",
+      "titulo": "Espera el resultado",
+      "parrafos": [
+        "Al terminar la vuelta, la app envía las fotos para compararlas con imágenes del campus. Quédate quieto unos segundos."
+      ],
+      "oiras": ["Analizando…"]
+    },
+    {
+      "id": "resultado",
+      "titulo": "Escucha dónde estás",
+      "parrafos": [
+        "La app te dice en voz alta el lugar más cercano y a qué distancia estás, por ejemplo: «Estás cerca de Bloque 35, a unos 17 metros». También te dice qué tan segura está del resultado, por ejemplo: «Confianza media».",
+        "En esta pantalla tienes estos botones: «Repetir en voz alta» vuelve a decir el resultado, «Volver a ubicarme» empieza otra vuelta y «Volver al inicio» te lleva de nuevo al orbe."
+      ],
+      "capturas": ["resultado"]
+    },
+    {
+      "id": "problemas",
+      "titulo": "Si algo falla",
+      "parrafos": ["Si la app no logra ubicarte, te dice por qué. Estos son los mensajes posibles:"],
+      "lista": [
+        "«No completaste la vuelta»: giraste menos de una vuelta o te detuviste antes de tiempo.",
+        "«Sin conexión con el servidor»: el celular no tiene internet o el servicio no responde.",
+        "«El análisis tardó demasiado»: la conexión está lenta."
+      ],
+      "despues": [
+        "En cualquiera de los casos, toca dos veces el botón «Repetir» y da la vuelta otra vez, más despacio. Si el resultado no te parece correcto, usa «Volver a ubicarme»."
+      ]
+    }
+  ]
+}
