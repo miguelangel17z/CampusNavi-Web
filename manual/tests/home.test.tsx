@@ -14,9 +14,17 @@ describe("Home", () => {
 
   it("tiene las secciones principales", () => {
     render(<Home />);
-    for (const titulo of ["Cómo funciona", "Hecha para usarse sin ver", "Manuales"]) {
+    for (const titulo of ["Conoce Campus Navi", "Cómo funciona", "Hecha para usarse sin ver", "Manuales"]) {
       expect(screen.getByRole("heading", { level: 2, name: titulo })).toBeInTheDocument();
     }
+  });
+
+  it("muestra el video justo después de la presentación y antes de «Cómo funciona»", () => {
+    render(<Home />);
+    const h2 = screen.getAllByRole("heading", { level: 2 }).map((h) => h.textContent);
+    expect(h2.slice(0, 2)).toEqual(["Conoce Campus Navi", "Cómo funciona"]);
+    const seccion = screen.getByRole("region", { name: "Conoce Campus Navi" });
+    expect(seccion.querySelector("video")).not.toBeNull();
   });
 
   it("enlaza a los dos manuales", () => {

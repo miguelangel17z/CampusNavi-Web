@@ -1,0 +1,12 @@
+{
+  "voz": "es-CO-SalomeNeural",
+  "velocidad": "-5%",
+  "frases": [
+    { "id": "quienes-1", "texto": "Somos Campus Navi, un equipo de desarrollo." },
+    { "id": "quienes-2", "texto": "Queremos que cualquier persona pueda saber dónde está dentro del campus." },
+    { "id": "talkback", "texto": "Campus Navi funciona con TalkBack, el lector de pantalla de Android." },
+    { "id": "pruebas-1", "texto": "Lo probamos con personas con discapacidad visual. Solo hay que dar una vuelta con el celular." },
+    { "id": "pruebas-2", "texto": "La app toma cinco fotos, las compara con imágenes del campus y dice en voz alta dónde estás." },
+    { "id": "cierre", "texto": "Campus Navi, accesibilidad y orientación para todos." }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "voz": "es-CO-SalomeNeural",
+  "velocidad": "-5%",
+  "frases": {
+    "quienes-1": {
+      "sha256": "04a708818368af8809ad2d8fcaa2721fc7c0daf6e3a4ea94f11c73914a0ab2a9",
+      "duracionSeg": 3.1
+    },
+    "quienes-2": {
+      "sha256": "ea7e0bb1b6cf2ea4e1bcb24c8e88a378deefebbc0a78917db9ee7de6450b5f6c",
+      "duracionSeg": 3.94
+    },
+    "talkback": {
+      "sha256": "863c710a70fe10ee5528811cc2fadb453500246dc6974fc05a5ee3ec41ee338a",
+      "duracionSeg": 4.46
+    },
+    "pruebas-1": {
+      "sha256": "643c85b76cfd554779b6835f4f7b516d2c7c0790a5b58143d2dea8cbf14ac711",
+      "duracionSeg": 6.31
+    },
+    "pruebas-2": {
+      "sha256": "60271225b73ed82f4bcd3855817e16a8e743b4b67cafe7093040c8dc5995d765",
+      "duracionSeg": 6.12
+    },
+    "cierre": {
+      "sha256": "d2783400a5c05ce2717f9c08f3b90f4bc899437183d383ae5c1c3dde849de73b",
+      "duracionSeg": 3.94
+    }
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "segundo": 0,
+    "tipo": "imagen",
+    "texto": "Aparece el logo de Campus Navi, un pin de ubicación con una órbita, y el lema «Accesibilidad y orientación para todos»."
+  },
+  {
+    "segundo": 5,
+    "tipo": "imagen",
+    "texto": "El equipo de desarrollo le explica la app a un usuario con discapacidad visual en el campus."
+  },
+  {
+    "segundo": 5,
+    "tipo": "voz",
+    "texto": "Somos Campus Navi, un equipo de desarrollo."
+  },
+  {
+    "segundo": 10,
+    "tipo": "voz",
+    "texto": "Queremos que cualquier persona pueda saber dónde está dentro del campus."
+  },
+  {
+    "segundo": 19,
+    "tipo": "imagen",
+    "texto": "Grabación de la pantalla del celular con TalkBack activo sobre la pantalla de inicio de la app y luego el escaneo."
+  },
+  {
+    "segundo": 19,
+    "tipo": "voz",
+    "texto": "Campus Navi funciona con TalkBack, el lector de pantalla de Android."
+  },
+  {
+    "segundo": 25,
+    "tipo": "sonido",
+    "texto": "TalkBack hablando"
+  },
+  {
+    "segundo": 38,
+    "tipo": "imagen",
+    "texto": "Una usuaria y un usuario con bastón sostienen el celular frente a ellos y giran despacio sobre su lugar. Al final, la usuaria escucha el resultado en el celular."
+  },
+  {
+    "segundo": 38,
+    "tipo": "voz",
+    "texto": "Lo probamos con personas con discapacidad visual. Solo hay que dar una vuelta con el celular."
+  },
+  {
+    "segundo": 48,
+    "tipo": "voz",
+    "texto": "La app toma cinco fotos, las compara con imágenes del campus y dice en voz alta dónde estás."
+  },
+  {
+    "segundo": 62,
+    "tipo": "imagen",
+    "texto": "Una usuaria acerca el celular al oído para escuchar la respuesta de la app."
+  },
+  {
+    "segundo": 63,
+    "tipo": "sonido",
+    "texto": "La app responde por voz"
+  },
+  {
+    "segundo": 74,
+    "tipo": "imagen",
+    "texto": "Logo de Campus Navi, el lema y la firma «Equipo de desarrollo Campus Navi»."
+  },
+  {
+    "segundo": 74,
+    "tipo": "voz",
+    "texto": "Campus Navi, accesibilidad y orientación para todos."
+  }
+]

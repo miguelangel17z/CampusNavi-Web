@@ -17,6 +17,26 @@ necesario está dentro de esta carpeta (no depende de archivos de fuera).
 
 El guion para la sustentación está en [`DEMO.md`](./DEMO.md).
 
+## Video de presentación
+
+La Home tiene la sección «Conoce Campus Navi» con un video de ≈ 82 s (`src/components/PromoVideo.tsx`): no se
+reproduce solo, tiene subtítulos en español (`<track kind="captions">`) y la transcripción completa debajo, con
+la descripción de lo que se ve en cada escena. Los archivos están en `public/video/`:
+
+| Archivo | Qué es |
+|---|---|
+| `campus-navi.mp4` | Video (h264 + AAC, < 20 MB) |
+| `campus-navi-poster.jpg` | Imagen que se ve antes de reproducir |
+| `campus-navi.vtt` | Subtítulos |
+| `campus-navi-transcripcion.json` | Transcripción que se muestra en la página |
+
+No se editan a mano: se generan en el proyecto del video (`../video/`, ver su `README.md`) con
+`npm run exportar`, que los copia aquí. La duración que se anuncia en la página se lee del MP4 al construir el
+sitio. Después de exportar, corre `npm test` y `npm run test:e2e`.
+
+Los cuatro archivos **se versionan** con el sitio: Vercel construye desde git y no puede generar el video. Si
+faltan, `npm run build` falla con un mensaje que indica cómo regenerarlos.
+
 ## Requisitos
 
 - Node.js 20.9 o superior (probado con Node 22) y npm.

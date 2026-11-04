@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PhoneScreenshot } from "@/components/PhoneScreenshot";
+import { PromoVideo } from "@/components/PromoVideo";
 import type { CapturaId } from "@/content/capturas";
 
 const pasos: { titulo: string; texto: string; captura: CapturaId }[] = [
@@ -78,6 +79,17 @@ export default function Home() {
           <div className="orb absolute h-72 w-72 opacity-60 blur-2xl" aria-hidden="true" />
           <PhoneScreenshot id="inicioUsuario" className="relative w-60 sm:w-64" eager />
         </div>
+      </section>
+
+      {/* Video de presentación */}
+      <section aria-labelledby="titulo-video" className="py-16">
+        <h2 id="titulo-video" className="text-3xl font-bold sm:text-4xl">
+          Conoce Campus Navi
+        </h2>
+        <p className="mt-3 max-w-2xl text-lg text-muted">
+          Poco más de un minuto con el equipo de desarrollo y las pruebas con usuarios.
+        </p>
+        <PromoVideo className="mt-10" />
       </section>
 
       {/* Cómo funciona */}

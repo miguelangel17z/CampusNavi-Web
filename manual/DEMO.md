@@ -1,6 +1,6 @@
 # Guion de la sustentación · Manuales de Campus Navi
 
-Duración estimada: 8 a 10 minutos. Orden: Inicio → Manual del usuario (con audio) → Manual del administrador.
+Duración estimada: 10 a 12 minutos. Orden: Inicio (con el video) → Manual del usuario (con audio) → Manual del administrador.
 Si no hay internet o falla Vercel, ir directo al [plan B](#plan-b-sin-internet).
 
 ## Preparación (el día anterior)
@@ -8,7 +8,7 @@ Si no hay internet o falla Vercel, ir directo al [plan B](#plan-b-sin-internet).
 - [ ] Con internet, en `manual/`: `npm install` y `npm run build`. El build descarga la fuente Inter y la deja
       dentro de `out/`; después ya no hace falta internet.
 - [ ] Probar `npx serve out` y abrir <http://localhost:3000>. Revisar las tres páginas y que suene un audio.
-- [ ] Copiar `out/` y la carpeta `public/audio/` a una memoria USB (respaldo si falla el portátil).
+- [ ] Copiar `out/` (incluye el video en `out/video/`) y la carpeta `public/audio/` a una memoria USB (respaldo si falla el portátil).
 - [ ] Abrir la URL de Vercel en el navegador y dejarla en una pestaña.
 - [ ] Revisar que el portátil tenga sonido y que los parlantes del salón funcionen. Llevar audífonos o un
       parlante pequeño de respaldo.
@@ -18,15 +18,19 @@ Si no hay internet o falla Vercel, ir directo al [plan B](#plan-b-sin-internet).
 
 ## Guion
 
-### 1. Inicio (`/`) · 2 minutos
+### 1. Inicio (`/`) · 3 a 4 minutos (con el video)
 
 1. Abrir la página de inicio. Presentar Campus Navi con el lema «Accesibilidad y orientación para todos».
 2. Señalar que el estilo es el mismo de la app: fondo azul noche, el orbe violeta y tarjetas con borde violeta.
-3. Bajar a **«Cómo funciona»**: los tres pasos de la app (decir «uno», dar una vuelta, escuchar dónde estás),
+3. En **«Conoce Campus Navi»**, reproducir el video (≈ 1 min 22 s). Subir el volumen antes: en dos tramos se oye
+   el audio real de TalkBack y de la app. Al terminar, abrir «Leer la transcripción del video» para mostrar que
+   también es accesible sin verlo ni oírlo. Si el tiempo es corto, mostrar solo hasta el tramo de TalkBack
+   (0:38).
+4. Bajar a **«Cómo funciona»**: los tres pasos de la app (decir «uno», dar una vuelta, escuchar dónde estás),
    cada uno con su captura real.
-4. Bajar a **«Hecha para usarse sin ver»**: funciona con TalkBack, se controla con la voz, avisa con vibración y
+5. Bajar a **«Hecha para usarse sin ver»**: funciona con TalkBack, se controla con la voz, avisa con vibración y
    sonido mientras se escanea, y el sensor de orientación decide cuándo tomar cada foto.
-5. Bajar a **«Manuales»**: mostrar las dos tarjetas y explicar para quién es cada uno.
+6. Bajar a **«Manuales»**: mostrar las dos tarjetas y explicar para quién es cada uno.
 
 Mensaje clave: el sitio tiene dos públicos distintos y cada manual está pensado para el suyo.
 

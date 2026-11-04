@@ -1,0 +1,33 @@
+{
+  "name": "campus-navi-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Video promocional de Campus Navi hecho con Remotion",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "narracion": "python scripts/narracion.py",
+    "subtitulos": "tsx scripts/exportar.ts --sin-render --sin-copiar",
+    "render": "remotion render src/index.ts CampusNaviPromo out/campus-navi.mp4",
+    "exportar": "tsx scripts/exportar.ts"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.540",
+    "@remotion/google-fonts": "4.0.540",
+    "@remotion/media": "4.0.540",
+    "@remotion/media-utils": "4.0.540",
+    "@remotion/transitions": "4.0.540",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.540"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "@types/react": "19.3.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vitest": "5.1.0"
+  }
+}

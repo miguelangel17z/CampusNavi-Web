@@ -1,0 +1,8 @@
+node_modules/
+out/
+.venv/
+# Clips y música originales: pesados y con personas reales. Se comparten por fuera de git.
+public/material/
+# Pruebas temporales
+*.tmp
+__pycache__/
